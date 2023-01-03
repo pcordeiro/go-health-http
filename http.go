@@ -15,7 +15,7 @@ type Config struct {
 
 const defaultTimeout = 5 * time.Second
 
-func NewHttpHealthCheck(cfg *Config) func(ctx context.Context) error {
+func NewHttpCheck(cfg *Config) func(ctx context.Context) error {
 	if cfg.Timeout == 0 {
 		cfg.Timeout = defaultTimeout
 	}
